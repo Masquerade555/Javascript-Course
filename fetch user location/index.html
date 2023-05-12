@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button type="button" value="Display Location" onclick="getLocation()">SHOW LOCATION</button>
+
+    <script>
+        var options = {
+            enableHighAccuracy: true,
+            maximumAge: 50000,
+            timeout: 60000
+        };
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, errorH, options)
+            }
+            else {
+                alert("Location is not supported")
+            }
+        }
+
+        function showPosition(position) {
+            alert("Latitude " + position.coords.latitude + "\nLongitude: " +
+                position.coords.longitude)
+        }
+
+        function errorH(error) {
+            switch (error.code) {
+                case error.POSITION_DENIED:
+                    alert("U have denied the access")
+                case error.POSITION_UNAVAILABLE:
+                    alert("There was a problem")
+                case error.TIMEOUT:
+                    alert("The App has timed out")
+            }
+        }
+    </script>
+</body>
+
+</html>

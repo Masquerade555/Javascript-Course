@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">Click Here</button>
+
+    <h1 id="txt"></h1>
+
+    <script>
+        var btn = document.getElementById("btn")
+        btn.addEventListener("mouseover",f1)
+        btn.addEventListener("click",f2)
+        btn.addEventListener("mouseout", f3)
+
+        function f1(){
+            document.getElementById("txt").innerHTML = "Mouse Over <br>"
+        }
+
+        function f2(){
+            document.getElementById("txt").innerHTML = "Clicked <br>"
+        }
+
+        function f3(){
+            document.getElementById("txt").innerHTML = "Mouse Out <br>"
+        }
+    </script>
+</body>
+</html>

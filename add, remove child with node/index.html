@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id="u1">
+        <li id="l1">Movie</li>
+        <li>Novels</li>
+    </ul>
+
+    <button onclick="add()">Add</button>
+    <button onclick="remove()">Remove</button>
+
+    <script>
+        function remove()
+        {
+            var n = document.getElementById("l1")
+            n.parentNode.removeChild(n)
+        }
+
+        function add()
+        {
+            adding = "Kung Fu Panda"
+            n = document.createElement("li")
+            txt = document.createTextNode(adding)
+            n.appendChild(txt)
+            document.getElementById("u1").appendChild(n)
+        }
+    </script>
+</body>
+</html>

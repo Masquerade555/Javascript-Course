@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        brand = parseInt(prompt("Select your mobile brand \n Press 1 for Iphone \n Press 2 for Samsung"))
+
+        switch(brand)
+        {
+            case 1:
+                window.alert("You have choosen iphone")
+
+                model = parseInt(prompt("Select your mobile brand \n Press 1 for latest model \n Press 2 for old models"))
+
+                switch (model) {
+                    case 1:
+                        window.alert("You have selected brand new iphone")
+                        break;
+                        case 2:
+                        window.alert("You have selected Old model iphone")
+                        break;
+                
+                    default:
+                        window.alert("Wrong Choice")
+                        break;
+                }
+
+                break
+                case 2:
+                window.alert("You have choosen samsung")
+                
+                model = parseInt(prompt("Select your mobile brand \n Press 1 for latest model \n Press 2 for old models"))
+
+                switch (model) {
+                    case 1:
+                        window.alert("You have selected brand new samsung")
+                        break;
+                        case 2:
+                        window.alert("You have selected Old model samsung")
+                        break;
+                
+                    default:
+                        window.alert("Wrong Choice")
+                        break;
+                }
+                break
+                default:
+                        window.alert("Wrong Choice")
+                        break;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Marksheet</h1>
+    <label for="">Subject 1</label>
+    <input type="number"  id="v1">
+    <br><br>
+
+    <label for="">Subject 2</label>
+    <input type="number"  id="v2">
+<br><br>
+
+    <label for="">Subject 3</label>
+    <input type="number"  id="v3">
+    <br><br>
+
+    <button onclick="result()">Result</button>
+
+    <br><br>
+    <center>
+        <p id="res">
+            The Result will be showed here
+        </p>
+    </center>
+
+    <div class="box">
+        <div id="colorbox"></div>
+    </div>
+
+
+    <style>
+        .box{
+            margin: 0px auto;
+            width: 80%;
+            height: 100px;
+            border: 5px solid black;
+        }
+
+        #colorbox{
+            height: 100px;
+        }
+    </style>
+
+    <script>
+        function result(){
+
+            s1 = parseInt(document.getElementById("v1").value)
+            s2 = parseInt(document.getElementById("v2").value)
+            s3 = parseInt(document.getElementById("v3").value)
+
+            total = s1 + s2+ s3
+            p = total/300*100
+
+            document.getElementById("res").innerHTML="your total marks are "+ total+
+            " and your percentage is "+p +"%";
+
+            if (p >=80) {
+                document.getElementById("colorbox").style.width = p+"%";
+                document.getElementById("colorbox").style.backgroundColor = "green";
+            } else if (p >=40) {
+                document.getElementById("colorbox").style.width = p+"%";
+                document.getElementById("colorbox").style.backgroundColor = "yellow";
+            }
+            else{
+                document.getElementById("colorbox").style.width = p+"%";
+                document.getElementById("colorbox").style.backgroundColor = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>

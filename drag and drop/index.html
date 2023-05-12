@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="d1" style="border: black solid 2px; height: 130px; width: 80px; padding: 10px;">
+        <img src="123.png" height="75" width="75" alt="" id="image1" draggable="true" ondragstart="drag_image(event)">
+
+    </div>
+
+    <br><br>
+
+    <div id="d2" style="border: black solid 2px; height: 130px; width: 80px; padding: 10px;"
+    ondrop="drop_image(event)" ondragover="allow_drop(event)"></div>
+
+    <script>
+        function drag_image(event)
+        {
+            event.dataTransfer.setData("image", event.target.id)
+        }
+
+        function allow_drop(event)
+        {
+            event.preventDefault()
+        }
+
+        function drop_image(event)
+        {
+            var data = event.dataTransfer.getData("image");
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function storeSession(){
+            if (("sessionStorage" in window )&&window["sessionStorage"]!=null) {
+                name = document.getElementById("n1").value
+                //age = document.getElementById("a1").value
+
+                sessionStorage.setItem("username", name)
+                nameValue = sessionStorage.getItem("username")
+
+                sessionStorage.setItem("age", document.getElementById("a1").value)
+                ageValue = parseInt(sessionStorage.getItem("age"))
+
+                alert("Your name stored in session is "+nameValue + " and your age is "+ageValue)
+
+                
+                document.getElementById("hh1").innerHTML = "Your name stored in session is "+nameValue + " and your age is "+ageValue
+
+            }
+        }
+
+    </script>
+
+    <form name="myF">
+        <label for="">Enter Name</label>
+        <input type="text" id="n1">
+        <label for="">Enter Age</label>
+        <input type="number" id="a1">
+        <br>
+        <input type="button" value="Submit" onclick="storeSession()">
+    </form>
+    
+    <h1 id="hh1"></h1>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="startGameNow()">
+    
+    <script>
+        var myPlayer
+
+        function startGameNow() {
+            myPlayer = new component(30,30, "red",225,225)
+            myGameArea.start()
+        }
+
+        var myGameArea = {
+            canvas: document.createElement("canvas"),
+            start: function(){
+                this.canvas.width = 480
+                this.canvas.height = 300
+                this.context = this.canvas.getContext("2d")
+                document.body.insertBefore(this.canvas, document.body.childNodes[0])
+                this.frameNo = 0
+                this.interval = setInterval(updateGameArea, 20)
+                window.addEventListener("keydown", function(e){
+                    e.preventDefault()
+                    myGameArea.keys = (myGameArea.keys || [])
+                    myGameArea.keys[e.keyCode] = (e.type == "keydown")
+                })
+                window.addEventListener("keyup", function(e){
+                    myGameArea.keys[e.keyCode] = (e.type == "keydown")
+                })
+            },
+            stop: function(){
+                clearInterval(this.interval)
+            },
+            clear: function(){
+                this.context.clearRect(0,0,this.canvas.width, this.canvas.height)
+            }
+        }
+
+        function component(width, height, color, x,y,type){
+            this.type = type
+            this.width = width
+            this.height = height
+            this.speed = 0
+            this.angle = 0
+            this.moveingAngle = 0
+            this.x =x
+            this.y = y
+            this.update = function(){
+                c = myGameArea.context
+                c.save()
+                c.translate(this.x,this.y)
+                c.rotate(this.angle)
+                c.fillStyle = color
+                c.fillRect(this.width / -2, this.height / -2, this.width, this.height)
+                c.restore()
+            }
+            this.newPosition = function(){
+                this.angle += this.moveingAngle * Math.PI / 180
+                this.x += this.speed * Math.sin(this.angle)
+                this.y -= this.speed *Math.cos(this.angle)
+            }
+        }
+
+        function updateGameArea(){
+            myGameArea.clear()
+            myGameArea.moveingAngle = 0
+            myGameArea.speed = 0
+            if (myGameArea.keys && myGameArea.keys[37]) {
+                myPlayer.moveingAngle = -1
+            }
+            if (myGameArea.keys && myGameArea.keys[39]) {
+                myPlayer.moveingAngle = 1
+            }
+            if (myGameArea.keys && myGameArea.keys[38]) {
+                myPlayer.speed = 1
+            }
+            if (myGameArea.keys && myGameArea.keys[40]) {
+                myPlayer.speed = -1
+            }
+            myPlayer.newPosition()
+            myPlayer.update()
+        }
+    </script>
+
+    <style>
+        canvas{
+            border: 2px solid steelblue;
+            background-color: antiquewhite;
+        }
+    </style>
+</body>
+</html>

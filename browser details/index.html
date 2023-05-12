@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button type="button" onclick="browserDetails()">Click to see browser info</button>
+
+    <script>
+        function browserDetails()
+        {
+            document.write("Browser name: "+ navigator.appName +"<br>")
+            document.write("Browser version: "+ navigator.appVersion +"<br>")
+            document.write("Browser language: "+ navigator.browserLanguage +"<br>")
+            document.write("Platform: "+ navigator.platform +"<br>")
+
+            if (navigator.cookieEnabled) {
+                document.write("Cookie is enabled on your browser")
+            }
+            else
+            {
+                document.write("Cookie is disabled on your browser")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img id="myImg" src="mern.png" alt="" width="500" height="500">
+<br><br>
+    <input type="text" id="txt" value="MERN" readonly>
+    <br><br>
+    <button type="button" onclick="changeImage()">Click here</button>
+
+    <script>
+        function changeImage(){
+            img = document.getElementById("myImg").alt
+
+            if (img == "mern") {
+                document.getElementById("myImg").src = "mern.png"
+                document.getElementById("myImg").alt = "hcj"
+                document.getElementById("txt").value = "MERN"
+            }
+            else if(img == "hcj"){
+                document.getElementById("myImg").src = "hcj.png"
+                document.getElementById("myImg").alt = "mern"
+                document.getElementById("txt").value = "HTML CSS JS"
+            }
+            else {
+                document.getElementById("myImg").src = "hcj.png"
+                document.getElementById("myImg").alt = "mern"
+                document.getElementById("txt").value = "HTML CSS JS"
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="i1"></h1>
+
+    <script>
+        x =""
+        const myObj = {
+            name: "Mira",
+            age: 25,
+            degrees: [
+                {name: "Masters", subject: ["Computer","Accounting"]},
+                {name: "Bachelors", subject: ["Commerce", "Computer", "Arts"]}
+            ]
+        }
+
+        for(let i in myObj.degrees){
+            x += "<h2>" + myObj.degrees[i].name + "</h2>"
+            for(let j in myObj.degrees[i].subject)
+            {
+                x += myObj.degrees[i].subject[j] + "<br>"
+            }
+        }
+
+        document.getElementById("i1").innerHTML = x
+    </script>
+    
+</body>
+</html>

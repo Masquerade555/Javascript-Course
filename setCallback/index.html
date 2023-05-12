@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="i1"></h1>
+
+    <script>
+        function myCalculator(n1, n2, myCallback)
+        {
+            result = n1 * n2
+            myCallback(result)
+        }
+
+        function myDisplay(dat)
+        {
+            document.getElementById("i1").innerHTML = dat
+        }
+
+        myCalculator(10, 5, myDisplay)
+    </script>
+    
+</body>
+</html>

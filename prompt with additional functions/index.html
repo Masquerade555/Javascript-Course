@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="myF()">Press it</button>
+
+    <h1 id="hea"></h1>
+
+    <script>
+        function myF(){
+            let txt
+            let person = prompt("Please Enter Your Name", "Jackie")
+            if (person ==null || person == "") {
+                txt = "User cancelled the prompt"
+            }
+            else{
+                txt = "Hello "+person+ " How ya doing?"
+            }
+            document.getElementById("hea").innerHTML = txt
+        }
+    </script>
+    
+</body>
+</html>

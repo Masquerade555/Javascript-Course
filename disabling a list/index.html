@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <select name="" id="s1">
+            <option value="Apple">Apple</option>
+            <option value="Peach">Peach</option>
+            <option value="Watermelon">Watermelon</option>
+        </select>
+
+        <input type="button" value="Disable" onclick="dis()">
+        <input type="button" value="Enable" onclick="ena()">
+    </form>
+
+    <script>
+        function ena()
+        {
+            document.getElementById("s1").disabled = false
+        }
+
+        function dis()
+        {
+            document.getElementById("s1").disabled = true
+        }
+    </script>
+    
+    
+</body>
+</html>

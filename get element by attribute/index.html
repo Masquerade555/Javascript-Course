@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="#" onclick="getPlayerName(this)" data-player-name="Cristiano Ronaldo">Soccer</a>
+    <br>
+    <a href="#" onclick="getPlayerName(this)" data-player-name="Roger Federer">Tennis</a>
+
+    <script>
+        function getPlayerName(player)
+        {
+            var playerName = player.getAttribute("data-player-name")
+            alert(playerName)
+        }
+    </script>
+    
+</body>
+</html>

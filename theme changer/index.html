@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="theme">
+    
+    <div class="container">
+
+        <div class="header"></div>
+
+        <div id="section">
+            <br><br>
+            <center>
+                <label>Select Theme</label>
+
+                <select  id="choice">
+                    <optgroup>
+                        <option value="a">Picture</option>
+                        <option value="b">Light</option>
+                        <option value="c">Dark</option>
+                    </optgroup>
+                </select>
+                <br><br>
+
+                <button onclick="themechange()">Apply</button>
+            </center>
+        </div>
+
+        <div id="footer"></div>
+    </div>
+
+    <style>
+        body{
+            margin: 0px;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container{
+            width: 80%;
+            margin: 0px auto;
+        }
+
+        #header{
+            background-color: rgba(51, 51, 51, 1);
+            height: 120px;
+        }
+        #footer{
+            background-color: rgba(51, 51, 51, 1);
+            height: 120px;
+        }
+        #section{
+            background-color: rgba(255, 255, 255, 0.7);
+            height: 1000px;
+        }
+    </style>
+
+    <script>
+        function themechange()
+        {
+            uc = document.getElementById("choice").value
+
+            if (uc == "a") {
+                document.getElementById("theme").style.backgroundImage = "url(123.png)";
+                document.getElementById("theme").style.backgroundColor = "";
+            }
+            else if (uc == "b") {
+                document.getElementById("theme").style.backgroundImage = "";
+                document.getElementById("theme").style.backgroundColor = "white";
+            }
+            else if (uc == "c") {
+                document.getElementById("theme").style.backgroundImage = "";
+                document.getElementById("theme").style.backgroundColor = "black";
+            }
+        }
+    </script>
+</body>
+</html>

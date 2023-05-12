@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>We will use this with xampp</h1>
+    <input type="button" id="btn" onclick="f()" value="Click here">
+    <h1>Count Numbers <output id="result"></output></h1>
+
+    <script>
+        function f(){
+            var objworker
+            if (typeof (objworker) == "undefined") {
+                objworker = new Worker("index2.js")
+
+            } 
+
+            objworker.onmessage = function(event){
+                document.getElementById("result").innerHTML = event.data
+            }
+        }
+    </script>
+</body>
+</html>
