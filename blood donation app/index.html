@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Enter Your Blood Type <input type="text" name="" id="blo">
+
+    <button onclick="formula()">Check</button>
+
+    <h1 id="result"></h1>
+
+    <script>
+        function formula() {
+            b = document.getElementById("blo").value
+
+            if (b == "O+" || b =="o+") {
+                document.getElementById("result").innerHTML =
+                "You can donate blood to O+ and O-"
+            }
+            else if (b == "O-" || b =="o-") {
+                document.getElementById("result").innerHTML =
+                "You can donate blood to O+ and O-"
+            }
+            else if (b == "A+" || b =="a+") {
+                document.getElementById("result").innerHTML =
+                "You can donate blood to A+ and A-"
+            }
+            else if (b == "A-" || b =="a-") {
+                document.getElementById("result").innerHTML =
+                "You can donate blood to A+ and A-"
+            }
+            else if (b == "B+" || b =="b+") {
+                document.getElementById("result").innerHTML =
+                "You can donate blood to B+ and B-"
+            }
+            else if (b == "B-" || b =="b-") {
+                document.getElementById("result").innerHTML =
+                "You can donate blood to B+ and B-"
+            }
+             else {
+                document.getElementById("result").innerHTML =
+                "Wrong Blood Try Again"
+            }
+        }
+    </script>
+
+</body>
+
+</html>

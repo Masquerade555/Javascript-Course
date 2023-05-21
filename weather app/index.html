@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" name="" id="v1">
+    <br>
+    <button onclick="formula()">Check</button>
+
+    <br>
+    <h1 id="result"></h1>
+
+    <script>
+        function formula()
+        {
+            n = document.getElementById("v1").value
+
+            if (n <= 9) {
+                document.getElementById("result").innerHTML = "Its Very Cold Outside"
+            }
+            else if (n <= 29) {
+                document.getElementById("result").innerHTML = "Its Normal Outside"
+            }
+            else if (n >= 30) {
+                document.getElementById("result").innerHTML = "Its Very Hot Outside"
+            }
+        }
+    </script>
+</body>
+</html>

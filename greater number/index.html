@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Value 1<input type="number" name="" id="v1">
+    Value 2<input type="number" name="" id="v2">
+    Value 3<input type="number" name="" id="v3">
+
+    <button onclick="formula()">Submit</button>
+
+    <h1 id="result"></h1>
+
+    <script>
+        function formula(){
+        n1 = document.getElementById("v1").value;
+        n2 = document.getElementById("v2").value;
+        n3 = document.getElementById("v3").value;
+
+        if (n1 > n3) {
+            if (n1 > n2) {
+                document.getElementById("result").innerHTML = "Value 1 is greater"
+            } else {
+                document.getElementById("result").innerHTML = "Value 2 is greater"
+            }
+        } 
+        else if(n2 > n3)
+        {
+            document.getElementById("result").innerHTML = "Value 2 is greater"
+        }
+        else if (n3 > n1 && n3 > n2)      
+        {
+            document.getElementById("result").innerHTML = "Value 3 is greater"
+        }
+    }
+    </script>
+    
+</body>
+</html>

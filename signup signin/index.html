@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Email<input type="email" name="" id="e1">
+    Password<input type="password" name="" id="p1">
+
+    <br><br>
+
+    Check Email<input type="email" name="" id="e2">
+    Check Password<input type="password" name="" id="p2">
+
+    <br><br>
+
+    <button onclick="chc()">Check</button>
+
+    <br><br>
+
+    <h1 id="hea"></h1>
+
+    <script>
+        function chc(){
+        v1 = document.getElementById("e1").value
+        v2 = document.getElementById("p1").value
+        v3 = document.getElementById("e2").value
+        v4 = document.getElementById("p2").value
+
+        if (v1 == v3 && v2 == v4) {
+            document.getElementById("hea").innerHTML = "Email And Password Match \n Sign in Successfull"
+        } else {
+            document.getElementById("hea").innerHTML = "Email And Password Don`t Match \n Sign in Unsuccessfull"
+        }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Symptom 1</h3>
+    <h4>Type Breathing or vomitting</h4>
+    <input type="text" name="" id="v1">
+
+    <h3>Symptom 1</h3>
+    <h4>Type Diareha or restleness</h4>
+    <input type="text" name="" id="v2">
+
+    <button onclick="formula()">Check</button>
+
+    <h1 id="result"></h1>
+
+    <script>
+        function formula()
+        {
+            n1 = document.getElementById("v1").value
+            n2 = document.getElementById("v2").value
+
+            if (n1 == "breathing" || n1 == "breath") {
+                document.getElementById("result").innerHTML =
+                "You have Covid"
+            } 
+            else if(n1 == "vomitting" || n1 == "vomit") {
+                if (n2 == "diareha" ) {
+                    document.getElementById("result").innerHTML =
+                "You have Typhoid"
+                } 
+                else if(n2 == "restleness" || n2 == "restles"){
+                    document.getElementById("result").innerHTML =
+                "You have Dengue"
+                }
+                else{
+                document.getElementById("result").innerHTML =
+                "Wrong Choice Try Again"
+            }
+            }
+            else{
+                document.getElementById("result").innerHTML =
+                "Wrong Choice Try Again"
+            }
+        }
+    </script>
+    
+</body>
+</html>

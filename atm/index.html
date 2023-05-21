@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Username<input type="text" name="" id="un">
+    <br>
+    Password<input type="password" name="" id="pass">
+    <br>
+    Amount<input type="number" name="" id="num">
+    <br>
+    <button onclick="formula()">Withdraw</button>
+
+    <h1 id="result1"></h1>
+    <h1 id="result2"></h1>
+
+    <script>
+        function formula()
+        {
+            u = document.getElementById("un").value
+            p = document.getElementById("pass").value
+            n = document.getElementById("num").value
+
+            if (u == "admin" && p == "admin") {
+                document.getElementById("result1").innerHTML =
+                    "Welcome User"
+                if (n > 5000) {
+                    document.getElementById("result2").innerHTML =
+                    "Sorry Limit Exceeded Try Again Later"
+                } else {
+                    document.getElementById("result2").innerHTML =
+                    "Thank you for using our atm"
+                }
+            } else {
+                document.getElementById("result1").innerHTML =
+                    "Username or Passwword Incorrect"
+            }
+        }
+    </script>
+    
+</body>
+</html>

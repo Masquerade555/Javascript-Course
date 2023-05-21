@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Basic Salary<input type="number" name="" id="v1">
+    <br>
+    <button onclick="formula()">Submit</button>
+    <br>
+    <h1 id="hea"></h1>
+
+    <script>
+        function formula(){
+            num = document.getElementById("v1").value
+
+            medical = num*0.5
+            transport= num*0.2
+            tax= num*0.10
+
+            n= parseInt(num)
+            m= parseInt(medical)
+            c= parseInt(transport)
+            t= parseInt(tax)
+
+            gross = parseInt((n+m+c)-t)
+
+            document.getElementById("hea").innerHTML = 
+            "Your Gross Salary is: "+gross+
+            " Your Basic Salary is: "+n+
+            " Your Medical is: "+m+
+            " Your Transportation is: "+c+
+            " Your Tax is: "+t
+        }
+    </script>
+    
+</body>
+</html>

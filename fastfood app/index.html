@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Zinger Or Roll<input type="text" name="" id="v1">
+    Cold Drink? Yes OR NO<input type="text" name="" id="v2">
+    Card Or Cash<input type="text" name="" id="v3">
+
+    <button onclick="formula()">Order</button>
+
+    <h1 id="result"></h1>
+
+    <script>
+        function formula() {
+            v1 = document.getElementById("v1").value
+            v2 = document.getElementById("v2").value
+            v3 = document.getElementById("v3").value
+
+            if (v1 == "zinger") {
+                if (v2 == "yes") {
+                    if (v3 == "card") {
+                        document.getElementById("result").innerHTML =
+                            "Your Order is " + v1 + " cold drink " + v2 + " payment method " + v3
+                    }
+                    else if (v3 == "cash") {
+                        document.getElementById("result").innerHTML =
+                            "Your Order is " + v1 + " cold drink " + v2 + " payment method " + v3
+                    }
+                    else {
+                        document.getElementById("result").innerHTML =
+                            "Wrong Choice Try Again"
+                    }
+
+                }
+                else if (v2 == "no") {
+                    if (v3 == "card") {
+                        document.getElementById("result").innerHTML =
+                            "Your Order is " + v1 + " cold drink " + v2 + " payment method " + v3
+                    }
+                    else if (v3 == "cash") {
+                        document.getElementById("result").innerHTML =
+                            "Your Order is " + v1 + " cold drink " + v2 + " payment method " + v3
+                    }
+                    else {
+                        document.getElementById("result").innerHTML =
+                            "Wrong Choice Try Again"
+                    }
+                }
+                else {
+                    document.getElementById("result").innerHTML =
+                        "Wrong Choice Try Again"
+                }
+            }
+            else if (v1 == "roll") {
+                if (v2 == "yes") {
+                    if (v3 == "card") {
+                        document.getElementById("result").innerHTML =
+                            "Your Order is " + v1 + " cold drink " + v2 + " payment method " + v3
+                    }
+                    else if (v3 == "cash") {
+                        document.getElementById("result").innerHTML =
+                            "Your Order is " + v1 + " cold drink " + v2 + " payment method " + v3
+                    }
+                    else {
+                        document.getElementById("result").innerHTML =
+                            "Wrong Choice Try Again"
+                    }
+
+                }
+                else if (v2 == "no") {
+                    if (v3 == "card") {
+                        document.getElementById("result").innerHTML =
+                            "Your Order is " + v1 + " cold drink " + v2 + " payment method " + v3
+                    }
+                    else if (v3 == "cash") {
+                        document.getElementById("result").innerHTML =
+                            "Your Order is " + v1 + " cold drink " + v2 + " payment method " + v3
+                    }
+                    else {
+                        document.getElementById("result").innerHTML =
+                            "Wrong Choice Try Again"
+                    }
+                }
+                else {
+                    document.getElementById("result").innerHTML =
+                        "Wrong Choice Try Again"
+                }
+            }
+            else {
+                document.getElementById("result").innerHTML =
+                    "Wrong Choice Try Again"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
